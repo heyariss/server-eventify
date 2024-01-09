@@ -96,7 +96,7 @@ const deleteTalents = async (req) => {
   if (!result)
     throw new NotFoundError(`Tidak ada pembicara dengan id :  ${id}`);
 
-  await result.remove();
+  await result.deleteOne();
 
   return result;
 };
